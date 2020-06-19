@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ironman Day4</title>
+<style>
+body{
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: thistle;
+	position: fixed;
+	width:100%;
+}
+
+ul li{float: left;}
+ul li a{
+	display: block;
+	color: black;
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+}
+
+ul li a.active{
+	color: lavender;
+	background-color: darkmagenta;
+}
+
+ul li a:hover:not(.active)
+{
+	background-color: darkviolet;
+	color: white;
+}
+</style>
+
+</head>
+<body>
+
+	<ul>
+	<li><a href="../" class="active">首頁</a></li>
+	<li><a href="../album">相簿</a></li>
+	{% if user in USERS %}
+	<li><a href="../upload">上傳</a></li>
+	<li><a href="../logout">登出</a></li>
+	{% else %}
+	<li><a href="../register">註冊</a></li>
+	<li><a href="../login">登入</a></li>
+	{% endif %}
+</ul>
+</body>
+</html>
