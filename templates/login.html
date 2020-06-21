@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/nav_bar.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/navbar.css')}}">
 <title>ironman album</title>
 </head>
 <style>
@@ -71,11 +71,11 @@ span {
     </tr>
     <tr>
       <th width="15%">account</th>
-      <td><input class="w3-input w3-border w3-round-large" type='text' name="userid" value={{id}}></td>
+      <td><input class="w3-input w3-border w3-round-large" type='text' name="user_id"></td>
     </tr>
     <tr>
       <th>password</th>
-      <td><input class="w3-input w3-border w3-round-large" type='password' name="userpw" value={{pw}}></td>
+      <td><input class="w3-input w3-border w3-round-large" type='password' name="password" ></td>
     </tr>
     <tr>
       <td colspan="2" align="right"><input class="button" value="登入" type='submit' name="send"></td>
